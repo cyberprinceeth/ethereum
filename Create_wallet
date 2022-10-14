@@ -1,0 +1,11 @@
+from eth_account import Account
+import secrets
+
+priv = secrets.token_hex(32)
+private_key = "0X" + priv
+
+print("PRIVATE KEY, SAFE BUT DO NOT SHARE:", private_key)
+
+acct = Account.from_key(private_key)
+
+print("ADDRESS: ", acct.address)
